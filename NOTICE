@@ -1,0 +1,12 @@
+This is an independent community guide for the Farcaster client snapshot.
+
+The target project is:
+  https://github.com/farcasterxyz/client
+
+The optional compatibility patch contains a small modification to upstream
+code distributed under the MIT License:
+
+  Copyright (c) 2026 Neynar, Inc.
+
+“Farcaster” and related marks belong to their respective owners. This guide is
+not endorsed by Farcaster or Neynar.

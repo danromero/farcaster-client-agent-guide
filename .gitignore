@@ -1,0 +1,4 @@
+.DS_Store
+.doctor-output/
+*.log
+*.tmp

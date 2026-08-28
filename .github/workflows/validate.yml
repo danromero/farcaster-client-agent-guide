@@ -1,0 +1,20 @@
+name: Validate guide
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install ShellCheck
+        run: sudo apt-get update && sudo apt-get install --yes shellcheck
+      - name: Validate repository
+        run: python3 scripts/validate-guide.py
+      - name: Run ShellCheck
+        run: shellcheck -x scripts/*.sh scripts/lib/*.sh scripts/shims/*

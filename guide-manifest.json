@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "guide": "farcaster-client-ios-simulator",
+  "target_repository": "https://github.com/farcasterxyz/client",
+  "supported_host": "macOS",
+  "supported_target": "iOS Simulator",
+  "entrypoints": {
+    "agent_instructions": "AGENTS.md",
+    "quickstart": "docs/QUICKSTART.md",
+    "preflight": "scripts/preflight.sh",
+    "bootstrap": "scripts/bootstrap-ios.sh",
+    "start": "scripts/start-ios.sh",
+    "verify": "scripts/verify-ios.sh",
+    "doctor": "scripts/doctor.sh"
+  },
+  "progressive_docs": {
+    "agent_workflow": "docs/AGENT_WORKFLOW.md",
+    "ios_runbook": "docs/IOS_SIMULATOR.md",
+    "credentials": "docs/CREDENTIALS.md",
+    "troubleshooting": "docs/TROUBLESHOOTING.md",
+    "verification": "docs/VERIFICATION.md",
+    "maintenance": "docs/MAINTENANCE.md"
+  },
+  "release_control": {
+    "state": "FROZEN",
+    "status": "RELEASE_STATUS.md",
+    "checklist": "docs/RELEASE_CHECKLIST.md",
+    "acceptance_rule": "RC-01 through RC-27 must pass; reopen only with a recorded trigger"
+  },
+  "verified_upstream": {
+    "commit": "b6922e24036cac6f5e6d51904a59ff7cfcdd8483",
+    "commit_date": "2026-08-26",
+    "verified_date": "2026-08-28"
+  },
+  "credential_free_milestone": "onboarding UI with expected integration warnings",
+  "fully_functional_requires_private_configuration": true,
+  "runtime_verifier_scope": "live Metro ownership, simulator app process, screenshot, and explicit visual state; prior bootstrap and build evidence remains required",
+  "simulator_selection": {
+    "build_flag": "--device SIMULATOR_UDID",
+    "verify_flag": "--udid SIMULATOR_UDID",
+    "multiple_booted_behavior": "verification fails until a UDID is selected"
+  },
+  "verification_exit_codes": {
+    "0": "automated checks passed and onboarding or authenticated UI was explicitly confirmed",
+    "1": "one or more automated checks failed",
+    "2": "automated checks passed but visual confirmation is pending"
+  }
+}
